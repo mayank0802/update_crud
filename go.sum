@@ -1,6 +1,5 @@
 github.com/gorilla/mux v1.8.0 h1:i40aqfkR1h2SlN9hojwV5ZA91wcXFOvkdNIeFDP5koI=
 github.com/gorilla/mux v1.8.0/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
-github.com/mayank0802/crud v0.0.0-20211216103337-b7edad6b97d6 h1:kDmbdDjJRPBFZOWYbfWSyy0RIpQ9UHLMNqZ/TjeDjkY=
 github.com/mayank0802/crud/config v0.0.0-20211216080011-054a828fb4ed h1:ify8Zlexk3vdslowcZBIdYH+lDUX8682gwcS/CfpHOA=
 github.com/mayank0802/crud/config v0.0.0-20211216080011-054a828fb4ed/go.mod h1:3loHwcBqCpuMxaPr+qWBgEdc+fOGV5u1v6G+Cc3GMfs=
 github.com/mayank0802/crud/controller v0.0.0-20211216103337-b7edad6b97d6 h1:d4WgwI211gYC9SuzAV11yMNHB/5TZaOZz7OEGTvJc/U=

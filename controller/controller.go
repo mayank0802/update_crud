@@ -8,7 +8,7 @@ import (
 	//".../config"
 	//"../model"
 	"github.com/mayank0802/crud/config"
-	
+
 	"github.com/mayank0802/crud/model"
 )
 
