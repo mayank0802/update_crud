@@ -8,17 +8,14 @@ import(
 	"strconv"
 	"fmt"
 	"math/rand"
+	"database/sql"
+	"text/template"
+	"github.com/go-sql-driver/mysql"
 )
 
-// STUDENT STRUCT 
-type Student struct {
-	ID  int `json:"id"`
-	Name string `json:"name"`
-	Age int `json: "age"`
-	Subject string `json: "subject"`
-	Class string `json: "class"`
 
-}
+// STUDENT STRUCT 
+
 //Init student var as slice 
 var students []Student;
 //get all students
