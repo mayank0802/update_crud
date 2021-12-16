@@ -7,6 +7,7 @@ import(
 	"github.com/gorilla/mux"
 	"strconv"
 	"fmt"
+	"math/rand"
 )
 
 // STUDENT STRUCT 
@@ -47,12 +48,30 @@ func getStudent(w http.ResponseWriter, r *http.Request){
 
 // create a new student
 func createStudent(w http.ResponseWriter, r *http.Request){
-
+	w.Header().Set("Content-Type","application/json")
+	var student Student
+	_= json.NewDecoder(r.Body).Decode(& student)
+	student.ID = rand.Intn(10000000);
+	students = append(students, student);
+	json.NewEncoder(w).Encode(student)
 }
 
 // delete a student
 func deleteStudents(w http.ResponseWriter, r *http.Request){
-
+	w.Header().Set("Content-Type", "application/json")
+	params := mux.Vars(r)
+	id, err :=  strconv.Atoi(params["id"])
+		if err != nil {
+			fmt.Println(err)
+		}
+	for index, item := range students{
+		
+		if item.ID == id{
+			students = append(students[:index], students[index+ 1: ]...)
+			break
+		}
+	}
+	json.NewEncoder(w).Encode(students)
 }
 //get
 func main()  {
