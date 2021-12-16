@@ -7,9 +7,9 @@ import (
     "log"
     "net/http"
  
-    "../model"
+    "github.com/mayank0802/crud/config"
  
-    "../config"
+    "github.com/mayank0802/crud/model"
 )
 
 func getStudent(w http.ResponseWriter, r *http.Request){
