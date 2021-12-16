@@ -1,23 +1,19 @@
-package main;
+package main
 
-import(
-	"encoding/json"
+import (
 	"log"
 	"net/http"
+
 	"github.com/gorilla/mux"
-	"strconv"
-	"fmt"
-	"math/rand"
-	"database/sql"
-	"text/template"
-	"github.com/go-sql-driver/mysql"
-	
+	"github.com/mayank0802/crud/controller"
+
 )
 
+/*
 
-// STUDENT STRUCT 
+// STUDENT STRUCT
 
-//Init student var as slice 
+//Init student var as slice
 var students []Student;
 //get all students
 
@@ -63,7 +59,7 @@ func deleteStudents(w http.ResponseWriter, r *http.Request){
 			fmt.Println(err)
 		}
 	for index, item := range students{
-		
+
 		if item.ID == id{
 			students = append(students[:index], students[index+ 1: ]...)
 			break
@@ -86,4 +82,13 @@ func main()  {
 	r.HandleFunc("/students/student/{id}", deleteStudents).Methods("DELETE")
 	log.Fatal(http.ListenAndServe(":8000",r))
 
+}*/
+func main() {
+	r := mux.NewRouter()
+	// Route Handlers endpoint
+	r.HandleFunc("/students/students", controller.getStudents).Methods("GET")
+	r.HandleFunc("/students/student/{id}", controller.getStudent).Methods("GET")
+	r.HandleFunc("/students/student", controller.createStudent).Methods("POST")
+	r.HandleFunc("/students/student/{id}", controller.deleteStudents).Methods("DELETE")
+	log.Fatal(http.ListenAndServe(":8000", r))
 }

@@ -5,12 +5,14 @@ import (
 	"log"
 	"net/http"
 
-	// "./GOLANG/config"
-	// "./GOLANG/model"
+	//".../config"
+	//"../model"
 	"github.com/mayank0802/crud/config"
+	
 	"github.com/mayank0802/crud/model"
 )
 
+// git token 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
 func getStudent(w http.ResponseWriter, r *http.Request) {
 	var students model.Student
 	var arrStudents []model.Student
@@ -49,7 +51,7 @@ func createStudent(w http.ResponseWriter, r *http.Request) {
 	subject := r.FormValue("student")
 	age := r.FormValue("age")
 
-	_, err = db.Exec("INSERT INTO STUDENTS (NAME, AGE, SUBJECT, CLASS)VALUES(?, ?)", name, city)
+	_, err = db.Exec("INSERT INTO STUDENTS (NAME, AGE, SUBJECT, CLASS)VALUES(?, ?,?,?)", name, age, subject, class)
 	if err != nil {
 		log.Print(err)
 		return
