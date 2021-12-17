@@ -1,8 +1,20 @@
-module github.com/mayank0802/goland/main
+module github.com/mayank0802/crud
 
-go 1.13
+go 1.17
 
 require (
 	github.com/gorilla/mux v1.8.0
-	github.com/mayank0802/crud/controller v0.0.0-20211216103337-b7edad6b97d6
+	last.com/controller v0.0.0-00010101000000-000000000000
 )
+
+require (
+	github.com/go-sql-driver/mysql v1.6.0 // indirect
+	last.com/config v0.0.0-00010101000000-000000000000 // indirect
+	last.com/model v0.0.0-00010101000000-000000000000 // indirect
+)
+
+replace last.com/config => ./config
+
+replace last.com/controller => ./controller
+
+replace last.com/model => ./model

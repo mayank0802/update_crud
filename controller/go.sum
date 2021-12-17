@@ -1,5 +1,2 @@
-github.com/mayank0802/crud v0.0.0-20211216080011-054a828fb4ed h1:6F8nwRdiS4/FQlfLsoUvsK8uWs1IERhnYatd8S0VN/E=
-github.com/mayank0802/crud/config v0.0.0-20211216080011-054a828fb4ed h1:ify8Zlexk3vdslowcZBIdYH+lDUX8682gwcS/CfpHOA=
-github.com/mayank0802/crud/config v0.0.0-20211216080011-054a828fb4ed/go.mod h1:3loHwcBqCpuMxaPr+qWBgEdc+fOGV5u1v6G+Cc3GMfs=
-github.com/mayank0802/crud/model v0.0.0-20211216080011-054a828fb4ed h1:QKba6hbEnBK4qJt9wmjNDn8hIRIbvDqkkXOPYdo3vug=
-github.com/mayank0802/crud/model v0.0.0-20211216080011-054a828fb4ed/go.mod h1:jwgASgjGHAujIoNiDingJihyxhSGDckpgXuuFz4L7Mg=
+github.com/gorilla/mux v1.8.0 h1:i40aqfkR1h2SlN9hojwV5ZA91wcXFOvkdNIeFDP5koI=
+github.com/gorilla/mux v1.8.0/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=

@@ -1,8 +1,14 @@
-module github.com/mayank0802/crud/controller
+module last.com/controller
 
-go 1.13
+go 1.17
+
+replace last.com/config => ../config
+
+replace last.com/model => ../model
 
 require (
-	github.com/mayank0802/crud/config v0.0.0-20211216080011-054a828fb4ed
-	github.com/mayank0802/crud/model v0.0.0-20211216080011-054a828fb4ed
+	last.com/config v0.0.0-00010101000000-000000000000
+	last.com/model v0.0.0-00010101000000-000000000000
 )
+
+require github.com/gorilla/mux v1.8.0 // indirect

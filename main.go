@@ -5,8 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/mayank0802/crud/controller"
-
+	"last.com/controller"
 )
 
 /*
@@ -86,9 +85,9 @@ func main()  {
 func main() {
 	r := mux.NewRouter()
 	// Route Handlers endpoint
-	r.HandleFunc("/students/students", controller.getStudents).Methods("GET")
-	r.HandleFunc("/students/student/{id}", controller.getStudent).Methods("GET")
-	r.HandleFunc("/students/student", controller.createStudent).Methods("POST")
-	r.HandleFunc("/students/student/{id}", controller.deleteStudents).Methods("DELETE")
+	r.HandleFunc("/students", controller.GetStudent).Methods("GET")
+	r.HandleFunc("/students/student/{id}", controller.GetStudentByID).Methods("GET")
+	r.HandleFunc("/students/student", controller.CreateStudent).Methods("POST")
+	r.HandleFunc("/students/student/{id}", controller.DeleteStudents).Methods("DELETE")
 	log.Fatal(http.ListenAndServe(":8000", r))
 }
