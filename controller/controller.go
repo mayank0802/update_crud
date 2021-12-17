@@ -10,6 +10,7 @@ import (
 	"last.com/config"
 	"last.com/model"
 	"math/rand"
+
 )
 
 func GetStudent(w http.ResponseWriter, r *http.Request) {
@@ -44,11 +45,11 @@ func CreateStudent(w http.ResponseWriter, r *http.Request,) {
 	
 
 	var student model.Student
-	//rr := mux.NewRouter()
+
 	decoder := json.NewDecoder(r.Body)
 	decoder.Decode(&student)
 	student.ID = rand.Intn(1000000)
-	fmt.Println(student.Name)
+	fmt.Println(student.Age)
 
 		_,e := db.Query("INSERT INTO Students (E_NO,NAME, AGE, SUBJECT, CLASS) VALUES(?,?, ?,?,?)",student.ID, student.Name, student.Age, student.Subject, student.Class)
 		if e != nil {
