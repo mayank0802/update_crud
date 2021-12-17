@@ -50,14 +50,6 @@ func CreateStudent(w http.ResponseWriter, r *http.Request,) {
 	student.ID = rand.Intn(1000000)
 	fmt.Println(student.Name)
 
-	err := r.ParseForm() 
-	if err != nil{
-    	   panic(err)
-	}
-
-	 name := r.FormValue("name")
-	 fmt.Println(name)
-	 
 		_,e := db.Query("INSERT INTO Students (E_NO,NAME, AGE, SUBJECT, CLASS) VALUES(?,?, ?,?,?)",student.ID, student.Name, student.Age, student.Subject, student.Class)
 		if e != nil {
 			fmt.Println(e)
