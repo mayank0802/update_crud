@@ -1,0 +1,9 @@
+{
+    "user":                 "root",
+    "passwd":               "root",
+    "net":                  "tcp",
+    "addr":                 "127.0.0.1:3306",
+    "dbname":               "DB",
+    "anp":                  true,
+    "database":             "mysql"
+}  
